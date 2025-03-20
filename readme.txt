@@ -1,19 +1,25 @@
-4th version
--------------
+#include <iostream>
+using namespace std;
 
-modified
+class Circle {
+public:
+	int radius;
+	double getArea();
 
-version3
--------------
-2nd version
--------------
+};
 
-modified
+double Circle::getArea() {
+	return 3.14 * radius * radius;
+}
 
+int main() {
+	Circle donut;
+	donut.radius = 1;
+	double area = donut.getArea();
+	cout << "donut 면적은" << area << endl;
 
-
-1st version
--------------
-
-
- good  morning
+	Circle pizza;
+	pizza.radius = 30;
+	area = pizza.getArea();
+	cout << "pizza 면적은 " << area << endl;
+}
